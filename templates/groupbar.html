@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+    <div class="chart-container" style="position: relative; height:40vh; width:80vw">
+        <canvas id="dual2"></canvas>
+    </div>
+
+
+    <script>
+        var barChartData = {
+            labels: [
+              "Absence of OB",
+              "Closeness",
+              "Credibility",
+              "Heritage",
+              "M Disclosure",
+              "Provenance",
+              "Reliability",
+              "Transparency"
+            ],
+            datasets: [
+              {
+                label: "American Express",
+                backgroundColor: "pink",
+                borderColor: "red",
+                borderWidth: 1,
+                data: [3, 5, 6, 7,3, 5, 6, 7]
+              },
+              {
+                label: "Mastercard",
+                backgroundColor: "lightblue",
+                borderColor: "blue",
+                borderWidth: 1,
+                data: [4, 7, 3, 6, 10,7,4,6]
+              },
+              {
+                label: "Paypal",
+                backgroundColor: "lightgreen",
+                borderColor: "green",
+                borderWidth: 1,
+                data: [10,7,4,6,9,7,3,10]
+              },
+              {
+                label: "Visa",
+                backgroundColor: "yellow",
+                borderColor: "orange",
+                borderWidth: 1,
+                data: [6,9,7,3,10,7,4,6]
+              }
+            ]
+          };
+          
+          var chartOptions = {
+            responsive: true,
+            legend: {
+              position: "top"
+            },
+            title: {
+              display: true,
+              text: "Chart.js Bar Chart"
+            },
+            scales: {
+              yAxes: [{
+                ticks: {
+                  beginAtZero: true
+                }
+              }]
+            }
+          }
+          
+          window.onload = function() {
+            var ctx = document.getElementById("dual2").getContext("2d");
+            window.myBar = new Chart(ctx, {
+              type: "bar",
+              data: barChartData,
+              options: chartOptions
+            });
+          };
+          
+      </script>
+   
+</body>
+</html>

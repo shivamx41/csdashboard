@@ -1,0 +1,5 @@
+,HOWOUTS,tot_ball,inning,batting_team,bowling_team,over_num,ball_num,stage,bowler,bowler_num,batsman,batsman_num,howout,wide_runs,noball,noball_bat_runs,LegByes_runs,Byes_runs,Bat_runs,Balls_faced,boundary,scoring_id,wickets,Overs,run,runs,ball_counts,runrate_ball,EXTRA
+0,Bowled,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+1,Catch,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+2,LBW,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+3,notout,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144

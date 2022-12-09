@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRICKET SOCIAL DASHBOARD</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   
+
+      
+<!-- Footer Bootsrap classes -->
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
+rel="stylesheet"
+/>
+
+  <!-- d3.js access file: "cdnjs.com/libraries/d3" -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.6.1/d3.min.js" 
+  integrity="sha512-MefNfAGJ/pEy89xLOFs3V6pYPs6AmUhXJrRlydI/9wZuGrqxmrdQ80zKHUcyadAcpH67teDZcBeS6oMJLPtTqw==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body class="bg-secondary">
+    {%include "navbar.html"%}
+                <!-- I innings wagon wheel -->
+                <div class="card p-5 mt-3 mx-auto " style="width: 80rem;">
+                    <div class="card-title text-success mt-5"><center><h1>WAGON WHEEL</h1></center></div>
+                    
+                          <form class="row justify-content-evenly" action="{{ url_for('wagonwheel1') }}" method="POST">
+                            <div class="col-md-3">
+                             
+                              <select class="form-select" id="validationCustom04" name="batsman1" required>
+                                <option selected value="0">Choose Batsman...</option>
+                                
+                                <option value="Ajay Narayanan ">Ajay Narayanan </option>
+                                <option value="Ajay Natraj ">Ajay Natraj </option>
+                                <option value="Ashok ">Ashok </option>
+                                <option value="Kishore Kumar ">Kishore Kumar  </option>
+                                <option value="Mathan ">Mathan  </option>
+                                <option value="Parthiban ">Parthiban </option>
+                                <option value="Shriram ">Shriram </option>
+                                <option value="Srinivasan ">Srinivasan  </option>
+                                <option value="Subash ">Subash  </option>
+                                <option value="Suresh ">Suresh </option>
+                                <option value="Syed Haseeb ">Syed Haseeb  </option>
+                              </select>
+                              
+                            </div>
+                              <!-- BOWLER -->
+                            <div class="col-md-3">
+                              
+                              <select class="form-select" id="validationCustom04" name="bowler1" required>
+                                <option selected value="0">Choose Bowler...</option>
+                                <option value="Kooda Lingam">Kooda Lingam</option>
+                                <option value="Navaneetha Krishnan">Navaneetha Krishnan</option>
+                                <option value="Om Jagadeesh">Om Jagadeesh</option>
+                                <option value="Praveen Kumar">Praveen Kumar</option>
+                                <option value="Senthil Nathan">Senthil Nathan</option>
+                              </select>
+                             
+                            </div>
+                            <input type="submit" class="col-md-3 btn btn-primary" value="Wagon Inning I">
+                          </form>
+                          
+                          
+                          <center><h3 class="text-primary mt-5">Innings I Batsmans Runs</h3>
+                            <div class=" mt-5 mx-auto row ">
+                                <div class="col">
+                                  <div class="chart-container " style=" height:60vh; width:38vw">
+                                    <canvas id="allwagon1"></canvas>
+                                </div>
+                              </div>
+                            </div></center>
+                        
+                        <div class="mt-5  row">
+                          <div class="col-6">
+                            <center><h3 class="text-primary mt-5">Batsman - Bowler</h3>
+                            <div class="chart-container " style=" height:60vh; width:38vw">
+                              <canvas id="wagon1"></canvas>
+                          </div></center>
+                          </div>
+          
+                          <div class="col-6 ">
+                            <center><h3 class="text-primary mt-5">Batsman Run Counts </h3>
+                            <div class="chart-container " style=" height:60vh; width:38vw">
+                              <canvas id="wagon12"></canvas>
+                          </div></center>
+                          </div>
+                        </div>
+                      </div>
+                   
+        
+        
+        
+        
+        
+        <!-- II innings Wagon wheel -->
+        <div class="card p-5 mt-3 mx-auto " style="width: 80rem;">
+        <div class="card-title text-success mt-5"><center><h1>WAGON WHEEL</h1></center></div>
+        
+            <form class="row justify-content-evenly" action="{{ url_for('wagonwheel2') }}" method="POST">
+                <div class="col-md-3">
+                 
+                  <select class="form-select" id="validationCustom04" name="batsman2" required>
+                    <option selected value="0">Choose Batsman...</option>
+                    <option value="Dilli Babu ">Dilli Babu  </option>
+                    <option value="Kaleeswaran ">Kaleeswaran </option>
+                    <option value="Kooda Lingam">Kooda Lingam </option>
+                    <option value="Kumar ">Kumar  </option>
+                    <option value="Mahendran ">Mahendran  </option>
+                    <option value="Murugan ">Murugan </option>
+                    <option value="Navaneetha Krishnan ">Navaneetha Krishnan </option>
+                    <option value="Om Jagadeesh ">Om Jagadeesh  </option>
+                    <option value="Pradeep ">Pradeep  </option>
+                    <option value="Praveen Kumar">Praveen Kumar </option>
+                    <option value="Senthil Nathan ">Senthil Nathan  </option>
+                  </select>
+                  
+                </div>
+                  <!-- BOWLER -->
+                <div class="col-md-3">
+                  
+                  <select class="form-select" id="validationCustom04" name="bowler2" required>
+                    <option selected value="0">Choose Bowler...</option>
+                    <option value="Kishore Kumar">Kishore Kumar</option>
+                    <option value="Mathan">Mathan</option>
+                    <option value="Parthiban">Parthiban</option>
+                    <option value="Srinivasan">Srinivasan</option>
+                    <option value="Subash">Subash</option>
+                    <option value="Syed Haseeb">Syed Haseeb</option>
+                  </select>
+                 
+                </div>
+                <input type="submit" class="col-md-3 btn btn-primary" value="Wagon Inning II">
+              </form>
+        
+             
+              <center><h3 class="text-primary mt-5">Innings II Batsmans Runs</h3>
+              <div class=" mt-5 mx-auto row ">
+                <div class="col">
+                   <div class="chart-container " style=" height:60vh; width:38vw">
+                    <canvas id="allwagon2"></canvas>
+                </div>
+               </div>
+            </div></center>
+        
+              <div class="mt-5 row">
+                <div class="col-6">
+                    <center><h3 class="text-primary mt-5">Batsman - Bowler</h3>
+                  <div class="chart-container " style=" height:60vh; width:38vw">
+                    <canvas id="wagon2"></canvas>
+                </div></center>
+                </div>
+        
+                <div class="col-6">
+                    <center><h3 class="text-primary mt-5">Batsman Run Counts</h3>
+                  <div class="chart-container " style=" height:60vh; width:38vw">
+                    <canvas id="wagon22"><h1>hi</h1></canvas>
+                </div></center>
+                </div>
+              </div>
+        
+            </div>
+        
+        
+        <!-- Barchart Innings I -->
+        <div class="card p-5 mt-3 mx-auto " style="width: 80rem;">
+        <center>
+            <div class="card-title text-danger" ><h2>INNING I</h2></div>
+        <div class="chart-container" style="position: relative; height:60vh; width:70vw">
+            <canvas id="myChart"></canvas>
+        </div>
+        </center>
+        </div>
+        
+        <!-- Barchart Innings II -->
+        <div class="card p-5 mt-3 mx-auto " style="width: 80rem;">      
+        <center>
+            <div class="card-title text-danger" ><h2>INNING II</h2></div>
+            <div class="chart-container" style="position: relative; height:60vh; width:70vw">
+                <canvas id="myChart1"></canvas>
+            </div>
+        </center>
+        </div>
+        
+        <!-- Worm Chart -->
+        <div class="card p-5 mt-3 mx-auto " style="width: 80rem;">
+                       
+        <center>
+            <div class="card-title text-danger" ><h2>WORM CHART</h2></div>
+            <div class="chart-container" style="position: relative; height:60vh; width:70vw">
+                <canvas id="line"></canvas>
+            </div>
+        </center>
+        
+        </div>
+        
+        
+        <!-- Innings I Howouts -->
+        <div class="card p-5 mt-3 mx-auto" style="width: 80rem;"> 
+        <div class="row ">
+            <div class="col-6">
+              <div class="card-title text-danger" ><h2>INNING I HOWOUT</h2></div>
+              <div class="chart-container" style="position: relative; height:60vh; width:45vw">
+                  <canvas id="donut1"></canvas>
+              </div>
+         </div>
+        <!-- Innings II Howouts  -->
+        <div class="col-6">  
+        <div class="card-title text-danger" ><h2>INNING II HOWOUT</h2></div>
+            <div class="chart-container" style="position: relative; height:60vh; width:45vw">
+                <canvas id="donut2"></canvas>
+            </div>
+        
+        </div>
+        </div>
+        </div>
+        
+        <!-- BATTER VS BATTER -->
+        <div class="card p-5 mt-3 mx-auto " style="width: 80rem;">
+        <div class="card-title text-info mt-5 "><center><h1>BATTER VS BATTER</h1></center></div>
+        <div class="row">
+        <div class="col-6">
+          <!-- <div class="card"> -->
+         
+            <div class="card-title text-danger" ><h2>Innings I BALLS FACED AND RUNS(ACC)</h2></div>
+            <div class="chart-container " style=" height:60vh; width:38vw">
+                <canvas id="vert_bar_1"></canvas>
+            <!-- </div> -->
+          </div></div>
+        
+        
+        
+        <div class="col-6">
+          <!-- <div class="card"> -->
+          <!-- style="position: relative"; height:60vh; width:70vw -->
+            <div class="card-title text-dark" ><h2>Innings II BALLS FACED AND RUNS(RE)</h2></div>
+            <div class="chart-container " style=" height:60vh; width:38vw">
+                <canvas id="vert_bar_2"></canvas>
+            </div>
+          <!-- </div> -->
+        
+        </div>
+        </div>
+        </div>
+        
+        
+        <!-- BOWLER VS BOWLER -->
+        <!-- BOWLER VS BOWLER Chart html code -->
+        <div class="card p-5 mt-3 mb-5 mx-auto " style="width: 80rem;">
+        <div class="card-title text-primary mt-5"><center><h1>BOWLER VS BOWLER</h1></center></div>
+        <div class="row">
+        <div class="col-6">
+          <!-- <div class="card"> -->
+         
+            <div class="card-title text-danger" ><h2>Innings I BALLS BOWLED AND RUNS(RE)</h2></div>
+            <div class="chart-container " style=" height:60vh; width:38vw">
+                <canvas id="bowler_vert_bar_1"></canvas>
+            <!-- </div> -->
+          </div>
+        </div>
+        
+        <div class="col-6">
+          <!-- <div class="card"> -->
+          <!-- style="position: relative"; height:60vh; width:70vw -->
+            <div class="card-title text-info" ><h2>Innings I BALLS BOWLED AND RUNS(ACC)</h2></div>
+            <div class="chart-container " style=" height:60vh; width:38vw">
+                <canvas id="bowler_vert_bar_2"></canvas>
+            </div>
+          <!-- </div> -->
+        
+        </div>
+        </div>
+        </div>
+           
+ 
+
+<!-- ============================================= JScripts =========================================-->
+<!-- JScripts for Wagon wheels Inning1 and 2 -->
+<script>
+    const wagon1 = 'http://127.0.0.1:8887/wagon.csv';
+    d3.csv(wagon1).then(function(datapoints){
+        
+        const batsman  = []
+        const bowler = []
+        const run = []
+       
+      
+        for(i=0;i<datapoints.length;i++){
+           
+            run.push(datapoints[i].run)
+            batsman.push(datapoints[i].batsman)
+            bowler.push(datapoints[i].bowler)
+            
+        }
+    
+    
+    const ctx2 = document.getElementById('wagon1');
+  
+    new Chart(ctx2, {
+      type: 'pie',
+      data: {
+        labels: [batsman,bowler],
+      datasets: [{
+        label: 'Inning I',
+        data: run,
+        backgroundColor: "rgb(75, 192, 192)",
+       
+        hoverOffset: 5
+      }]
+    }
+    });
+
+  });
+  </script>
+
+  <script>
+    const wagon12 = 'http://127.0.0.1:8887/wagon1runs.csv';
+    d3.csv(wagon12).then(function(datapoints){
+        
+        const batsman  = []
+        const bowler = []
+        const EXTRA = []
+        const  scoring_id =[]
+        const run = []
+      
+        for(i=0;i<datapoints.length;i++){
+            run.push(datapoints[i].run)
+            EXTRA.push(datapoints[i].EXTRA)
+            batsman.push(datapoints[i].batsman)
+            bowler.push(datapoints[i].bowler)
+            scoring_id.push(datapoints[i].scoring_id)
+        }
+    
+    
+    const ctx2 = document.getElementById('wagon12');
+  
+    new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+        labels: run,
+      datasets: [{
+        label: 'Inning I',
+        data: EXTRA,
+       
+        hoverOffset: 5
+      }]
+    }
+    });
+
+  });
+  </script>
+
+
+
+  <!-- wagon wheel II -->
+  <script>
+    const wagon2 = 'http://127.0.0.1:8887/wagon2.csv';
+    d3.csv(wagon2).then(function(datapoints){
+        
+        const batsman  = []
+        const bowler = []
+        const run = []
+       
+      
+        for(i=0;i<datapoints.length;i++){
+           
+            run.push(datapoints[i].run)
+            batsman.push(datapoints[i].batsman)
+            bowler.push(datapoints[i].bowler)
+            
+        }
+    
+    
+    const ctx2 = document.getElementById('wagon2');
+  
+    new Chart(ctx2, {
+      type: 'pie',
+      data: {
+        labels: [batsman,bowler],
+      datasets: [{
+        label: 'Inning I',
+        data: run,
+        backgroundColor: 'orange',
+       
+        hoverOffset: 5
+      }]
+    }
+    });
+
+  });
+  </script>
+
+  <script>
+    const wagon22 = 'http://127.0.0.1:8887/wagon2runs.csv';
+    d3.csv(wagon22).then(function(datapoints){
+        
+        const batsman  = []
+        const bowler = []
+        const EXTRA = []
+        const  scoring_id =[]
+        const run = []
+      
+        for(i=0;i<datapoints.length;i++){
+            run.push(datapoints[i].run)
+            EXTRA.push(datapoints[i].EXTRA)
+            batsman.push(datapoints[i].batsman)
+            bowler.push(datapoints[i].bowler)
+            scoring_id.push(datapoints[i].scoring_id)
+        }
+    
+    
+    const ctx2 = document.getElementById('wagon22');
+  
+    new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+        labels: run,
+      datasets: [{
+        label: 'Inning I',
+        data: EXTRA,
+       
+        hoverOffset: 5
+      }]
+    }
+    });
+
+  });
+  </script>
+
+ 
+  
+  <script>
+    const DEMO = 'http://127.0.0.1:8887/inn1_bar_batsmanrun.csv';
+    d3.csv(DEMO).then(function(datapoints){
+        
+        const batsman = []
+        const run = []
+        const ballsfaced = []
+     
+        for(i=0;i<datapoints.length;i++){
+            batsman.push(datapoints[i].batsman)
+            run.push(datapoints[i].run)
+            ballsfaced.push(datapoints[i].EXTRA)
+        }
+        
+    var config = {
+      type: 'pie',
+      data: {
+        datasets: [{
+          data: ballsfaced,
+          //backgroundColor: [
+            //'#ff0000', '#0000ff', '#ff0080', '#73ffff', '#5c26ff', '#002db3', '#ffff26', '#4cff4c', '#ff00ff'
+          //],
+          label: 'RUNS'
+        }],
+        labels: batsman
+      },
+      options: {
+        responsive: true
+      }
+    };
+ 
+   
+      var ctx = document.getElementById('allwagon1').getContext('2d');
+      window.myPie = new Chart(ctx, config);
+ 
+  });
+  </script>
+
+  <script>
+    const DEMO2 = 'http://127.0.0.1:8887/inn2_bar_batsmanrun.csv';
+    d3.csv(DEMO2).then(function(datapoints){
+        
+        const batsman = []
+        const run = []
+        const ballsfaced = []
+     
+        for(i=0;i<datapoints.length;i++){
+            batsman.push(datapoints[i].batsman)
+            run.push(datapoints[i].run)
+            ballsfaced.push(datapoints[i].EXTRA)
+        }
+        
+    var config = {
+      type: 'pie',
+      data: {
+        datasets: [{
+          data: ballsfaced,
+          //backgroundColor: [
+            //'#ff0000', '#0000ff', '#ff0080', '#73ffff', '#5c26ff', '#002db3', '#ffff26', '#4cff4c', '#ff00ff'
+          //],
+          label: 'RUNS'
+        }],
+        labels: batsman
+      },
+      options: {
+        responsive: true
+      }
+    };
+ 
+   
+      var ctx = document.getElementById('allwagon2').getContext('2d');
+      window.myPie = new Chart(ctx, config);
+ 
+  });
+  </script>
+
+<!-- -------------------------------------------BARCHARTS------------------------------------- -->
+<!-- BARCHART INNINGS I & II -->
+<script>
+    const chartData = 'http://127.0.0.1:8887/inn1_bar_batsmanrun.csv';
+    d3.csv(chartData).then(function(datapoints){
+        //console.log(datapoints[1].batsman)
+        const batsman = []
+        const run = []
+
+        for(i=0;i<datapoints.length;i++){
+            batsman.push(datapoints[i].batsman)
+            run.push(datapoints[i].run)
+        }
+        //console.log(batsman)
+
+        const data = {
+            labels: batsman,
+            datasets: [{
+              label: 'Run',
+              data: run,
+             
+              borderWidth: 1
+            }]
+          };
+      
+          // config 
+          const config = {
+            type: 'bar',
+            data,
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          };
+      
+          // render init block
+          const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+          );
+    });
+
+   
+</script>
+
+<script>
+    const chartData1 = 'http://127.0.0.1:8887/inn2_bar_batsmanrun.csv';
+    d3.csv(chartData1).then(function(datapoints){
+       // console.log(datapoints[1].batsman)
+        const batsman = []
+        const run = []
+
+        for(i=0;i<datapoints.length;i++){
+            batsman.push(datapoints[i].batsman)
+            run.push(datapoints[i].run)
+        }
+        //console.log(batsman)
+
+        const data = {
+            labels: batsman,
+            datasets: [{
+              label: 'Run',
+              data: run,
+             
+              borderWidth: 1
+            }]
+          };
+      
+          // config 
+          const config = {
+            type: 'bar',
+            data,
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          };
+      
+          // render init block
+          const myChart = new Chart(
+            document.getElementById('myChart1'),
+            config
+          );
+    });
+
+</script>
+
+
+<!--Worm(Line) Chart -->
+
+<script>
+    const chartline1 = 'http://127.0.0.1:8887/run_overs_1.csv';
+    const chartline2 = 'http://127.0.0.1:8887/run_overs_2.csv';
+    d3.csv(chartline1).then(function(datapoints){
+        //console.log(datapoints[1].over_num)
+        const over_num = []
+        const run = []
+        const run1 = []
+
+        for(i=0;i<datapoints.length;i++){
+            over_num.push(datapoints[i].over_num)
+            run.push(datapoints[i].run)
+        }
+        d3.csv(chartline2).then(function(datapoints1){
+        for(i=0;i<datapoints1.length;i++){
+            //over_num.push(datapoints1[i].over_num)
+            run1.push(datapoints1[i].run)
+        }
+       
+        //console.log("++++++++++)))",run)
+        //console.log(run1)
+    const ctx1 = document.getElementById('line');
+  
+    new Chart(ctx1, {
+      type: 'line',
+      data: {
+        labels: over_num,
+        datasets: [{
+          label: 'Inning I',
+          data: run,
+          fill: false,
+          borderColor: 'rgb(75, 192, 192)',
+          tension: 0.1
+      
+        },
+        {
+          label: 'Inning II',
+          data:run1,
+          fill: false,
+          borderColor: 'rgb(175, 92, 122)',
+          tension: 0.1
+      
+        }
+        ]
+      },
+      options: {
+        scales: {
+            y: {
+                stacked: true
+            }
+        }
+    }
+    });
+});
+});
+
+</script>
+
+<!-- =========================================================Howout============================================= -->
+<!-- Innings I Howout -->
+<script>
+    const chartdonut = 'http://127.0.0.1:8887/inn1_howout.csv';
+    d3.csv(chartdonut).then(function(datapoints){
+       // console.log(datapoints[1].HOWOUTS)
+        const HOWOUTS = []
+        const run = []
+
+        for(i=0;i<datapoints.length;i++){
+           HOWOUTS.push(datapoints[i].HOWOUTS)
+            run.push(datapoints[i].run)
+        }
+       // console.log(HOWOUTS)
+
+    const ctx2 = document.getElementById('donut1');
+  
+    new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+        labels: HOWOUTS,
+      datasets: [{
+        label: 'Inning I',
+        data: run,
+       
+        hoverOffset: 5
+      }]
+    }
+    });
+});
+  
+  </script> 
+  
+<!-- ========================================Innings II Howout============================================== -->
+  
+<script>
+    const chartdonut1 = 'http://127.0.0.1:8887/inn2_howout.csv';
+    d3.csv(chartdonut1).then(function(datapoints){
+        //console.log(datapoints[1].HOWOUTS)
+        const HOWOUTS = []
+        const run = []
+
+        for(i=0;i<datapoints.length;i++){
+           HOWOUTS.push(datapoints[i].HOWOUTS)
+            run.push(datapoints[i].run)
+        }
+        //console.log(HOWOUTS)
+
+    const ctx2 = document.getElementById('donut2');
+  
+    new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+        labels: HOWOUTS,
+      datasets: [{
+        label: 'Inning I',
+        data: run,
+       
+        hoverOffset: 5
+      }]
+    }
+    });
+});
+  
+  </script>   
+
+
+<!-- ==================================================VERTICAL BAR=============================================== -->
+<!-- vertical bar - Batsmans runs vs balls faced innings I-->
+<script>
+    const vertbar1 = 'http://127.0.0.1:8887/inn1_bar_batsmanrun.csv';
+    d3.csv(vertbar1).then(function(datapoints){
+        
+        const batsman = []
+        const run = []
+        const ballsfaced = []
+      
+        for(i=0;i<datapoints.length;i++){
+           batsman.push(datapoints[i].batsman)
+            run.push(datapoints[i].run)
+            ballsfaced.push(datapoints[i].EXTRA)
+        }
+        
+        var barChartData = {
+          labels: batsman,
+          datasets: [
+            {
+              label: "Balls Faced",
+              backgroundColor: "brown",
+              borderColor: "brown",
+              borderWidth: 1,
+              data: ballsfaced
+            },
+            {
+              label: "RUNS",
+              backgroundColor: "blue",
+              borderColor: "blue",
+              borderWidth: 1,
+              data: run
+            },
+           
+          ]
+        };
+  
+  
+        var chartOptions = {
+          responsive: true,
+          indexAxis: 'y',
+          legend: {
+            position: "top"
+          },
+          title: {
+            display: true,
+            text: "Chart.js Bar Chart"
+          },
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          }
+        }
+  
+        
+        var ctx = document.getElementById("vert_bar_1").getContext("2d");
+        window.myBar = new Chart(ctx, {
+          type: "bar",
+          data: barChartData,
+          options: chartOptions
+        });
+      });
+      </script>
+<!-- ======================================================================================= -->
+<!-- vertical bar - Batsmans runs vs balls faced innings II-->
+      <script>
+        const vertbar2 = 'http://127.0.0.1:8887/inn2_bar_batsmanrun.csv';
+        d3.csv(vertbar2).then(function(datapoints){
+            
+            const batsman = []
+            const run = []
+            const ballsfaced = []
+            console.log(batsman,run, ballsfaced)
+            for(i=0;i<datapoints.length;i++){
+               batsman.push(datapoints[i].batsman)
+                run.push(datapoints[i].run)
+                ballsfaced.push(datapoints[i].EXTRA)
+            }
+            
+            var barChartData = {
+              labels: batsman,
+              datasets: [
+                {
+                  label: "Balls Faced",
+                  backgroundColor: "orange",
+                  borderColor: "red",
+                  borderWidth: 1,
+                  data: ballsfaced
+                },
+                {
+                  label: "RUNS",
+                  backgroundColor: "lightblue",
+                  borderColor: "blue",
+                  borderWidth: 1,
+                  data: run
+                },
+               
+              ]
+            };
+      
+      
+            var chartOptions = {
+              responsive: true,
+              indexAxis: 'y',
+              legend: {
+                position: "top"
+              },
+              title: {
+                display: true,
+                text: "Chart.js Bar Chart"
+              },
+              scales: {
+                yAxes: [{
+                  ticks: {
+                    beginAtZero: true
+                  }
+                }]
+              }
+            }
+      
+            
+            var ctx = document.getElementById("vert_bar_2").getContext("2d");
+            window.myBar = new Chart(ctx, {
+              type: "bar",
+              data: barChartData,
+              options: chartOptions
+            });
+          });
+          </script>  
+<!-- ======================================================================================== -->
+<!-- =====================BOWLER VS BOWLER================================ -->
+<!-- BOWLER innings I VS BOWLER innings II-->
+        <!-- INNINGS I BOWLER VS BOWLER -->
+        <script>
+            const bowler_vertbar1 = 'http://127.0.0.1:8887/bowler_vertbar1.csv';
+            d3.csv(bowler_vertbar1).then(function(datapoints){
+                
+                const bowler = []
+                const run = []
+                const ballsfaced = []
+              
+                for(i=0;i<datapoints.length;i++){
+                   bowler.push(datapoints[i].bowler)
+                    run.push(datapoints[i].run)
+                    ballsfaced.push(datapoints[i].EXTRA)
+                }
+                
+                var barChartData = {
+                  labels: bowler,
+                  datasets: [
+                    {
+                      label: "Balls BOWLED",
+                      backgroundColor: "brown",
+                      borderColor: "brown",
+                      borderWidth: 1,
+                      data: ballsfaced
+                    },
+                    {
+                      label: "RUNS",
+                      backgroundColor: "blue",
+                      borderColor: "blue",
+                      borderWidth: 1,
+                      data: run
+                    },
+                   
+                  ]
+                };
+          
+          
+                var chartOptions = {
+                  responsive: true,
+                  indexAxis: 'y',
+                  legend: {
+                    position: "top"
+                  },
+                  title: {
+                    display: true,
+                    text: "Chart.js Bar Chart"
+                  },
+                  scales: {
+                    yAxes: [{
+                      ticks: {
+                        beginAtZero: true
+                      }
+                    }]
+                  }
+                }
+          
+                
+                var ctx = document.getElementById("bowler_vert_bar_1").getContext("2d");
+                window.myBar = new Chart(ctx, {
+                  type: "bar",
+                  data: barChartData,
+                  options: chartOptions
+                });
+              });
+              </script>
+  <!-- INNINGS II BOWLER VS BOWLER -->
+            <script>
+              const bowler_vertbar2 = 'http://127.0.0.1:8887/bowler_vertbar2.csv';
+              d3.csv(bowler_vertbar2).then(function(datapoints){
+                  
+                  const bowler = []
+                  const run = []
+                  const ballsfaced = []
+                
+                  for(i=0;i<datapoints.length;i++){
+                      bowler.push(datapoints[i].bowler)
+                      run.push(datapoints[i].run)
+                      ballsfaced.push(datapoints[i].EXTRA)
+                  }
+                  
+                  var barChartData = {
+                    labels: bowler,
+                    datasets: [
+                      {
+                        label: "BALLS BOWLED",
+                        backgroundColor: "red",
+                        borderColor: "red",
+                        borderWidth: 1,
+                        data: ballsfaced
+                      },
+                      {
+                        label: "RUNS",
+                        backgroundColor: "blue",
+                        borderColor: "blue",
+                        borderWidth: 1,
+                        data: run
+                      },
+                      
+                    ]
+                  };
+            
+            
+                  var chartOptions = {
+                    responsive: true,
+                    indexAxis: 'y',
+                    legend: {
+                      position: "top"
+                    },
+                    title: {
+                      display: true,
+                      text: "Chart.js Bar Chart"
+                    },
+                    scales: {
+                      yAxes: [{
+                        ticks: {
+                          beginAtZero: true
+                        }
+                      }]
+                    }
+                  }
+            
+                  
+                  var ctx = document.getElementById("bowler_vert_bar_2").getContext("2d");
+                  window.myBar = new Chart(ctx, {
+                    type: "bar",
+                    data: barChartData,
+                    options: chartOptions
+                  });
+                });
+                </script>
+  
+  
+  
+    {%include "footer.html"%}
+</body>
+</html>

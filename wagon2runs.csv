@@ -1,0 +1,4 @@
+,run,tot_ball,inning,over_num,ball_num,stage,bowler_num,batsman_num,howout,wide_runs,noball,noball_bat_runs,LegByes_runs,Byes_runs,Bat_runs,Balls_faced,boundary,scoring_id,wickets,Overs,runs,ball_counts,runrate_ball,EXTRA
+0,0,543,4,26,9,4,8,14,0,0,0,0,0,0,0,15,0,2,10,26.9,114,161,3.304347826,2
+1,1,273,2,13,6,2,4,7,0,0,0,0,0,0,1,9,0,2,5,13.6,58,82,1.68115942,1
+2,4,270,2,13,3,2,4,7,0,0,0,0,0,0,4,6,4,4,5,13.3,57,79,1.652173913,1
